@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, rgba(0,0,0,1) 60%), #0b0b0b;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.cookie {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.cookie:active {
+    transform: scale(0.95);
+}
+
+.cookie::before {
+    content: '★';
+    font-size: 8em;
+    color: #FFD700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
+}
+
+#revealImage {
+    width: 300px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.reveal {
+    animation: reveal 2s forwards;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+}
+
+.jump {
+    animation: jump 1.5s;
+}
+
+@keyframes reveal {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+    }
+    100% {
+        clip-path: circle(75% at 50% 50%);
+    }
+}

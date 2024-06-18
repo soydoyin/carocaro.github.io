@@ -1,0 +1,90 @@
+const messages = [
+    "¡A veces solo tienes que ver el lado positivo de las cosas, créeme, lo harás bien!",
+    "¡Tienes sueños increíbles que pocos pueden ver cuán grandes y maravillosos son!",
+    "¡Puedes lograr muchas cosas, tal vez no lo pienses así, pero cree esto: tus acciones opacan esas palabras!",
+    "¡Eres increíble siendo tú misma, tanto que ni tú te das cuenta!",
+    "¡Diseñar es un proceso continuo de inspiración y adaptación, tómate tu tiempo, no te sientas mal por no ser rápida!",
+    "¡Confía en ti mismo, no temas a equivocarte, los errores son parte del éxito!",
+    "La autenticidad es una forma de vida, no una fase.",
+    "El camino hacia la felicidad es abrazar quién realmente eres.",
+    "Vive la vida que siempre imaginaste, todos verán la felicidad de ese camino a su tiempo.",
+    "Eres más fuerte de lo que crees y más querida de lo que imaginas.",
+    "El arquitecto no solo diseña edificios, sino también experiencias.",
+    "Cada estructura tiene una historia que contar, y tú serás aquella arquitecta que lo diseñe.",
+    "El éxito en arquitectura se construye paso a paso, proyecto tras proyecto.",
+    "Cada boceto es un paso más cerca de tu visión perfecta. Sigue dibujando y creando.",
+    "La arquitectura es un maratón, no un sprint. Tómate tu tiempo para perfeccionar tus habilidades.",
+    "Eres más talentoso de lo que crees. Cada proyecto es una oportunidad para demostrarlo.",
+    "No tengas miedo de cometer errores; son los ladrillos con los que construirás tu maestría.",
+    "Cada crítica constructiva es una piedra angular para tu crecimiento profesional.",
+    "Recuerda, incluso los edificios más icónicos comenzaron como un simple boceto en papel.",
+    "Recuerda que la opinión de un profesor es solo una perspectiva. Confía en tu visión y en tu proceso creativo.",
+    "La crítica no define tu capacidad, sino tu disposición para aprender y evolucionar.",
+    "Cada arquitecto exitoso ha enfrentado críticas. Lo que te distingue es cómo respondes y mejoras.",
+    "Las opiniones de otros son herramientas para tu desarrollo, no juicios sobre tu valor como arquitecta.",
+    "Incluso los maestros recibieron críticas. Lo importante es cómo las utilizaron para refinar su arte.",
+    "Recuerda que el aprendizaje es un proceso continuo. Las críticas son simplemente parte de ese viaje.",
+    "Sonríe, la vida es demasiado corta para no disfrutar cada momento.",
+    "No pienses en el pasado, pues solo son recuerdos. Tampoco en el futuro, pues solo son pensamientos. Solo concéntrate en el presente, pues es el mejor obsequio que tienes.",
+    "Un día sin reír es un día perdido. ¡Encuentra algo que te haga reír hoy!",
+    "No dejes que nada ni nadie arruine tu día. ¡Sé tu propio rayo de sol!",
+    "Eres una persona maravillosa y mereces todo lo bueno que te pasa.",
+    "Una sonrisa tuya puede cambiar cualquier cosa.",
+    "Piensas muchas veces que no eres capaz, pero a los ojos de otros eres la más apta.",
+    "Aquellos que en el pasado te lastimaron no supieron ver la gran persona que eres y el valor que tienes.",
+    "No tengas miedo de pedir ayuda; es normal necesitarla y no te resta valor el hacerlo.",
+    "Tómate un agradable descanso; a veces, para despejar la mente, solo necesitas desconectarte.",
+    "Toma las cosas con calma. Subir una escalera rápidamente puede hacerte caer sin darte cuenta. No pasa nada si lo haces con paciencia.",
+    "No tengas miedo de expresar lo que sientes; tienes tu propia visión y pensamientos, y no hay razón para avergonzarse de ello. No temas ser juzgado por los demás.",
+    "No importa lo que otros digan; si eso te hace feliz, simplemente hazlo.",
+    "No trates de ser perfecta; cada defecto te hace única y no hay nada que cambiar.",
+    "Puede que desees apresurar el proceso y te frustres, pero créeme, todo llega a su tiempo. Mejor disfruta lo que te rodea.",
+    "Es importante aprender, comer y también jugar; son las bases para una buena condición",
+    "Sé que a menudo se destacan los errores, pero siempre están los detalles de tu esfuerzo. No los infravalores.",
+    "Tu versión del mañana debe ser capaz de vencer a tu versión del hoy.",
+    "Es mejor cometer un error que no hacer nada.",
+    "El tiempo no sana todas las heridas, pero debes dejar todo eso en el pasado y ver lo que eres hoy.",
+    "Aún no es hora de rendirse.",
+    "Vive tu vida y busca lo que desees; ¿qué más podría importar?",
+    "Al menos inténtalo. No juegas por jugar, juegas para ganar.",
+    "Tienes una luz única. Nunca le temas al cambio.",
+    "Nadie tiene derecho a decirte que no puedes hacer algo.",
+    "No se trata de perder o ganar, se trata de enfrentarlo incluso si tienes miedo. Eso te hace fuerte y más valiente de lo que crees.",
+    "No te enfoques en los errores; todo tiene solución si buscas lo divertido en ello.",
+    "Para hacer algo especial, solo hay que creer que es especial."
+];
+
+let clicks = 0;
+const cookieButton = document.getElementById('cookieButton');
+const messageElement = document.getElementById('message');
+const revealImage = document.getElementById('revealImage');
+
+const buttonStates = ['cookie-state-1', 'cookie-state-2', 'cookie-state-3'];
+
+cookieButton.addEventListener('click', () => {
+    clicks++;
+    cookieButton.classList.add('jump');
+    
+    setTimeout(() => {
+        cookieButton.classList.remove('jump');
+    }, 500);
+
+    if (clicks <= buttonStates.length) {
+        cookieButton.className = `cookie ${buttonStates[clicks - 1]}`;
+    }
+
+    if (clicks === 3) {
+        const message = messages[Math.floor(Math.random() * messages.length)];
+        messageElement.innerText = message;
+        messageElement.style.display = 'block';
+
+        revealImage.classList.remove('hidden');
+        revealImage.classList.add('reveal');
+        messageElement.classList.add('reveal');
+
+        setTimeout(() => {
+            cookieButton.style.display = 'none';
+        }, 2000);
+    }
+        
+});
