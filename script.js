@@ -1,90 +1,112 @@
-const messages = [
-    "¡A veces solo tienes que ver el lado positivo de las cosas, créeme, lo harás bien!",
-    "¡Tienes sueños increíbles que pocos pueden ver cuán grandes y maravillosos son!",
-    "¡Puedes lograr muchas cosas, tal vez no lo pienses así, pero cree esto: tus acciones opacan esas palabras!",
-    "¡Eres increíble siendo tú misma, tanto que ni tú te das cuenta!",
-    "¡Diseñar es un proceso continuo de inspiración y adaptación, tómate tu tiempo, no te sientas mal por no ser rápida!",
-    "¡Confía en ti mismo, no temas a equivocarte, los errores son parte del éxito!",
-    "La autenticidad es una forma de vida, no una fase.",
-    "El camino hacia la felicidad es abrazar quién realmente eres.",
-    "Vive la vida que siempre imaginaste, todos verán la felicidad de ese camino a su tiempo.",
-    "Eres más fuerte de lo que crees y más querida de lo que imaginas.",
-    "El arquitecto no solo diseña edificios, sino también experiencias.",
-    "Cada estructura tiene una historia que contar, y tú serás aquella arquitecta que lo diseñe.",
-    "El éxito en arquitectura se construye paso a paso, proyecto tras proyecto.",
-    "Cada boceto es un paso más cerca de tu visión perfecta. Sigue dibujando y creando.",
-    "La arquitectura es un maratón, no un sprint. Tómate tu tiempo para perfeccionar tus habilidades.",
-    "Eres más talentoso de lo que crees. Cada proyecto es una oportunidad para demostrarlo.",
-    "No tengas miedo de cometer errores; son los ladrillos con los que construirás tu maestría.",
-    "Cada crítica constructiva es una piedra angular para tu crecimiento profesional.",
-    "Recuerda, incluso los edificios más icónicos comenzaron como un simple boceto en papel.",
-    "Recuerda que la opinión de un profesor es solo una perspectiva. Confía en tu visión y en tu proceso creativo.",
-    "La crítica no define tu capacidad, sino tu disposición para aprender y evolucionar.",
-    "Cada arquitecto exitoso ha enfrentado críticas. Lo que te distingue es cómo respondes y mejoras.",
-    "Las opiniones de otros son herramientas para tu desarrollo, no juicios sobre tu valor como arquitecta.",
-    "Incluso los maestros recibieron críticas. Lo importante es cómo las utilizaron para refinar su arte.",
-    "Recuerda que el aprendizaje es un proceso continuo. Las críticas son simplemente parte de ese viaje.",
-    "Sonríe, la vida es demasiado corta para no disfrutar cada momento.",
-    "No pienses en el pasado, pues solo son recuerdos. Tampoco en el futuro, pues solo son pensamientos. Solo concéntrate en el presente, pues es el mejor obsequio que tienes.",
-    "Un día sin reír es un día perdido. ¡Encuentra algo que te haga reír hoy!",
-    "No dejes que nada ni nadie arruine tu día. ¡Sé tu propio rayo de sol!",
-    "Eres una persona maravillosa y mereces todo lo bueno que te pasa.",
-    "Una sonrisa tuya puede cambiar cualquier cosa.",
-    "Piensas muchas veces que no eres capaz, pero a los ojos de otros eres la más apta.",
-    "Aquellos que en el pasado te lastimaron no supieron ver la gran persona que eres y el valor que tienes.",
-    "No tengas miedo de pedir ayuda; es normal necesitarla y no te resta valor el hacerlo.",
-    "Tómate un agradable descanso; a veces, para despejar la mente, solo necesitas desconectarte.",
-    "Toma las cosas con calma. Subir una escalera rápidamente puede hacerte caer sin darte cuenta. No pasa nada si lo haces con paciencia.",
-    "No tengas miedo de expresar lo que sientes; tienes tu propia visión y pensamientos, y no hay razón para avergonzarse de ello. No temas ser juzgado por los demás.",
-    "No importa lo que otros digan; si eso te hace feliz, simplemente hazlo.",
-    "No trates de ser perfecta; cada defecto te hace única y no hay nada que cambiar.",
-    "Puede que desees apresurar el proceso y te frustres, pero créeme, todo llega a su tiempo. Mejor disfruta lo que te rodea.",
-    "Es importante aprender, comer y también jugar; son las bases para una buena condición",
-    "Sé que a menudo se destacan los errores, pero siempre están los detalles de tu esfuerzo. No los infravalores.",
-    "Tu versión del mañana debe ser capaz de vencer a tu versión del hoy.",
-    "Es mejor cometer un error que no hacer nada.",
-    "El tiempo no sana todas las heridas, pero debes dejar todo eso en el pasado y ver lo que eres hoy.",
-    "Aún no es hora de rendirse.",
-    "Vive tu vida y busca lo que desees; ¿qué más podría importar?",
-    "Al menos inténtalo. No juegas por jugar, juegas para ganar.",
-    "Tienes una luz única. Nunca le temas al cambio.",
-    "Nadie tiene derecho a decirte que no puedes hacer algo.",
-    "No se trata de perder o ganar, se trata de enfrentarlo incluso si tienes miedo. Eso te hace fuerte y más valiente de lo que crees.",
-    "No te enfoques en los errores; todo tiene solución si buscas lo divertido en ello.",
-    "Para hacer algo especial, solo hay que creer que es especial."
-];
+const mensajes = {
+  feliz: [
+    "¡supongo que sera un dia hermoso!",
+    "Sigue sonriendo, tu alegria es contagiosa",
+    "demonios...hoy sacaras los colmillitos hermosos",
+    "arrasa con todo no queda de otra",
+    "mereces esto y mucho mas...umm se",
+    "esos ojos y la sonrisa...nos vas a deslumbrar",
+    "solo no te olvides de otras cosas ok...",
+    "bueno...que te pico. porque hare que lo sientas diario",
+    "estar cerca de ti se sentira calido hoy",
+    "tu sonrisa deberia ser patrimonio de la humanidad",
+    "el que vaya a quitarte esa sonrisa...se muere",
+    "haces que el dia...se sienta mejor",
+    "hicieron contigo la mejor obra de arte...eres tan hermosa",
+    "lo lograras...creeme ya estas empezando con buena actitud",
+    "verte feliz es la cosa favorita de mi mundo y el de todos",
+    "si estas feliz todo deberia estar bien",
+    "...es sonrisa genuina o es ataque de cafeina?",
+    "tu felicidad es el mayor logro...y todos lo veran",
+    "y bien...todo fue es felicidad y tendras una buena play list para este momento",
+    "tu...me sorprendes carol hasta tus risas exageradas...son hermosas",
+    "una sonrisa y un buen outfit...y ya esta, eres modelo la mas encantadora y curiosa",
+  ],
+  triste: [
+    "Está bien sentirse así, no estás sola.",
+    "Llora si lo necesitas, es parte de sanar.",
+    "Mañana será mejor, te lo prometo.",
+    "esta bien, solo no lo ocultes importas..y mucho",
+    "la vida es una montaña rusa...solo espera la subida",
+    "siempre hay alguien escuchando recuerda...necesitas ser escuchada",
+    "no dejare...que estes asi, solo no lo guardes",
+    "Tú mereces todo lo bueno, incluso cuando no lo sientas.",
+    "Incluso en tus días grises, sigues iluminando el mundo..no lo olvides",
+    "Tienes una luz muy bonita, incluso cuando crees que está apagada",
+    "A veces necesitas una pausa, no porque seas débil, sino porque has sido fuerte por mucho tiempo",
+    "Siempre he admirado tu forma de ser, incluso en tus momentos más callados.",
+    " eres una persona valiosa en cada momento",
+    "se de lo que eres capaz...asi que no tengas miedo a este momento, lo pasaras",
+    "oye te di algo para que te protega no te pasara nada malo, te lo prometo",
+    "carol recuerda eres la mejor luz del mundo, no lo olvides nada ni nadie podra apagarte",
+    "yo también he llorado por cosas feas… como ver mi cuenta bancaria",
+    "La vida a veces apesta, pero al menos tú no...te amo",
+    "hasta los mas grandes lloran...tu porque no deberias?",
+    "si tienes miedo al que diran o como te critiquen...carol son tus descisiones y llegaras lejos",
+    "deberias saber que no esta mal sentirse asi...lo malo es que intentes hacer como si no pasara",
+    "eres hermosa..no ocultes ni dejes que otros jodan esa hermosa sonrisa",
+    "no queda de otra...quienes son matemos al enemigo",
+  ],
+  molesta: [
+    "Respira hondo, y piensa...despues putea",
+    "amor...si necesitas golpear algo...tengo un peluche",
+    "Expresa lo que sientes, si la violencia es necesaria....pos no queda de otra",
+    "hagamos la lista...y despues quemalo...la hoja..guarda para recordar",
+    "no merecen que le mandes tus tik toks",
+    "una cosa...se puede golpear?",
+    "alejate de los cutters porfa",
+    "haber yo te dije...putealos",
+    "llama y dime la lista de enemigos...por cada uno un dulce",
+    "te ayudare...a cargar los cuerpos",
+    "hagas lo que hagas...igual lo haras pa que te digo",
+    "ya sabes...defrente al cuello...pero corre..a verda no puedes",
+    "sabes...tienes linda mirada cuando te enojas...algo...no me mates",
+    "solo no rompas nada...no golpees la laptop o el celular",
+    "respira..piensa..reflexiona..ya despues golpeas",
+    "tenemos que ver el lado positivo...de no matar",
+    "carol...entre golosinas y cafe...que deseas para calmar la ira",
+    "siempre hay gente mierda...pero no es necesario pisarlo pasa de ellos",
+    "vamos se que esto es momentario...pero dilo putea..dios mio",
+    "eres...increible pero no quiero que te guardes el enojo...no me molestare",
+    "u nivel de furia está en modo jefa final. Me encantaría ser tu secuaz en esta misión de venganza",
+    "¿Quieres que vayamos a mirar gente fea y criticar sus decisiones de peinado hasta que se te pase?",
+    "¿Golpeamos una almohada juntos?",
+    "Mereces que te escuchen y te respeten, incluso cuando estás enojada",
+    "yo no me ire ni molestare...si vienes molesta...asi que tranqui y diloo",
+    "dios...y pensaba que la madre naturaleza era dura",
+  ],
+  aburrida: [
+    "¿Qué tal probar algo nuevo hoy?",
+    "A veces el aburrimiento es creatividad esperando salir.",
+    "Haz una locura divertida, aunque sea pequeña.",
+    "Te apuesto que no puedes dibujar un gato con los ojos cerrados.",
+    "¿Quieres que inventemos una historia absurda ?",
+    "Podemos aburrirnos juntos, pero con estilo. ¿Te parece?",
+    "Tu aburrimiento me da excusa perfecta para robar tu atención.",
+    "Si estás aburrida, es porque el mundo no está a tu altura hoy.",
+    "Tratar de lamerte el codo. pero si puedes...te invito lo que quieras",
+    "Levantar solo una ceja...se podra despues de 10 minutos",
+    "Los flamencos no nacen rosados. se ponen asi por lo que comen...y tu que comes para estar bonita",
+    "Tu pie es aproximadamente del mismo largo que tu antebrazo. eso ni lo sabia",
+    "sabias que nosotros brillamos pero es tan bajo el brillo que no lo vemos...pero si te veo a ti",
+    "Tu estómago tiene acido que puede disolver una hoja de afeitar. pero como tienes gastritis...creo que eso y mas",
+    "las hormigas no duermen,descansan...pero tu no eres hormiga asi que ni se te ocurra",
+    "las vacas tienen mejores amigas...no se como bromear con eso...pero eres linda(no te dije vaca)",
+    "las abejas pueden reconocer rostros asi que no le robes su miel",
+    "cuando parpadeas tus ojos hacen pausa visual",
+    "hay una fobia llamada cafefobia...cosa que se que no tienes",
+    "la persona mas enana...aun esta viva...y la mas hermosa esta leyendo esto",
+    "existe una teoria llamada las voces de tu cabeza son otra persona...da miedo",
+    "existe..una creencia de las llamas gemelas..tengo cierta creencia cuando estoy contigo...y da miedo",
+    "ahora quieres saber la ley que dice que lo que pienses atraeras...y existe esa posibilidad",
+    "existe un tesoro que nunca se podra encontrar no porque sea falso...si no porque no saben ni de donde es",
+    "....sabes algunos piensan que saben como pienso y hasta ahora nadie sabe lo que hare ni pensare...crees poder descifrarme?",
 
-let clicks = 0;
-const cookieButton = document.getElementById('cookieButton');
-const messageElement = document.getElementById('message');
-const revealImage = document.getElementById('revealImage');
+  ]
+};
 
-const buttonStates = ['cookie-state-1', 'cookie-state-2', 'cookie-state-3'];
-
-cookieButton.addEventListener('click', () => {
-    clicks++;
-    cookieButton.classList.add('jump');
-    
-    setTimeout(() => {
-        cookieButton.classList.remove('jump');
-    }, 500);
-
-    if (clicks <= buttonStates.length) {
-        cookieButton.className = `cookie ${buttonStates[clicks - 1]}`;
-    }
-
-    if (clicks === 3) {
-        const message = messages[Math.floor(Math.random() * messages.length)];
-        messageElement.innerText = message;
-        messageElement.style.display = 'block';
-
-        revealImage.classList.remove('hidden');
-        revealImage.classList.add('reveal');
-        messageElement.classList.add('reveal');
-
-        setTimeout(() => {
-            cookieButton.style.display = 'none';
-        }, 2000);
-    }
-        
-});
+function mostrarMensaje(emocion) {
+  const lista = mensajes[emocion];
+  const mensajeAleatorio = lista[Math.floor(Math.random() * lista.length)];
+  document.getElementById("mensaje").textContent = mensajeAleatorio;
+}
