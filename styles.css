@@ -1,96 +1,107 @@
 body {
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, rgba(0,0,0,1) 60%), #0b0b0b;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    overflow: hidden;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #040404;
+  text-align: center;
 }
 
-.container {
-    position: relative;
-    text-align: center;
-    z-index: 1;
+.imagen-encabezado {
+  position: relative;
 }
 
-.cookie {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    position: relative;
-    transition: transform 0.2s;
+.imagen-encabezado img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
 }
 
-.cookie:active {
-    transform: scale(0.95);
+.mensaje-emocion {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-.cookie::before {
-    content: '★';
-    font-size: 8em;
-    color: #FFD700;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.botones-emociones {
+  margin: 10px 0;
 }
 
-.message {
-    font-size: 1.5em;
-    color: #FFFFFF;
-    display: none;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    text-align: center;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 10px;
-    z-index: 2;
+.botones-emociones button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
-.hidden {
-    display: none;
+.feliz { background-color: yellow; color: black; }
+.triste { background-color: #5c8ed0; }
+.molesta { background-color: #d04545; }
+.aburrida { background-color: #70d88d; color: black; }
+
+.cuadricula {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+}
+.columna {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ Dos columnas automáticas */
+  gap: 15px;
+  padding: 20px;
+  border-radius: 20px;
+  width: 320px; /* Puedes ajustar el ancho */
+  box-sizing: border-box;
 }
 
-#revealImage {
-    width: 300px;
-    height: auto;
-    position: relative;
-    z-index: 1;
+.azul {
+  background-color: #b1b0ff;
 }
 
-.reveal {
-    animation: reveal 2s forwards;
-    position: relative;
-    z-index: 1;
+.rosa {
+  background-color: #ffaecb;
 }
 
-@keyframes jump {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-40px); }
-    100% { transform: translateY(0); }
+.cuadro {
+  background: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  width: 100%;           /* ✅ Que se ajuste a la columna */
+  box-sizing: border-box;
+}
+.titulo-columna {
+  grid-column: span 2; /* Ocupa ambas columnas */
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.6); /* fondo suave */
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 
-.jump {
-    animation: jump 1.5s;
+.carta-final {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f3eded;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 16px;
+  font-style: italic;
 }
 
-@keyframes reveal {
-    0% {
-        clip-path: circle(0% at 50% 50%);
-    }
-    100% {
-        clip-path: circle(75% at 50% 50%);
-    }
-}
+
